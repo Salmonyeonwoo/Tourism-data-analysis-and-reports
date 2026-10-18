@@ -1,0 +1,156 @@
+/* ==========================================================================
+   2026 AX Contest - Design System & Custom Styles
+   Colors: Curated Navy (#0f1e34, #162a47) & Teal (#0d7480, #14b8a6)
+   ========================================================================== */
+
+:root {
+  --navy-dark: #0f1e34;
+  --navy-mid: #162a47;
+  --navy-light: #1e3a5f;
+  --teal-primary: #0d7480;
+  --teal-accent: #14b8a6;
+  --teal-soft: #f0fdfa;
+  --coral-accent: #f26b5e;
+  --slate-bg: #f3f7fa;
+  --card-bg: #ffffff;
+}
+
+body {
+  font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--slate-bg);
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sidebar Gradient */
+.navy-sidebar {
+  background: linear-gradient(180deg, #162a47 0%, #0f1e34 100%);
+}
+
+/* Card Shadows & Glassmorphism */
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 4px 10px -3px rgba(15, 23, 42, 0.03);
+}
+
+.card-hover {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -8px rgba(13, 116, 128, 0.12);
+  border-color: #5eead4;
+}
+
+/* Accent Indicators */
+.teal-accent-bar {
+  width: 5px;
+  border-radius: 9999px;
+  background-color: var(--teal-primary);
+}
+
+.kpi-value {
+  color: var(--teal-primary);
+  letter-spacing: -0.04em;
+}
+
+/* Badges & Tags */
+.badge-survey {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.badge-practice {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.badge-report {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-concept {
+  background-color: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+}
+
+.badge-goal {
+  background-color: #ffe4e6;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+}
+
+/* Accordion & Details Styling */
+details {
+  border-radius: 0.75rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+details[open] {
+  background-color: #ffffff;
+  border-color: #99f6e4;
+  box-shadow: 0 4px 12px rgba(13, 116, 128, 0.05);
+}
+
+details summary {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+  color: var(--teal-primary);
+}
+
+/* Smooth Transitions & Modals */
+.modal-backdrop {
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Mobile Bottom Nav Bar */
+.mobile-nav-bar {
+  box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.08);
+}
